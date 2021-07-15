@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Shortcuts</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">  
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            font-family: 'Open Sans', 'sans-serif';
+            font-size: 14px;
+            min-height: 180px;
+            width: 400px;
+            background: #eee;
+        }
+
+        .wrapper{
+            padding-bottom: 30px;
+        }
+
+        h1{
+            font-family: monospace;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 0;
+            color: red;
+            display:flex;
+            align-items: center;
+        }
+
+        h1 span{
+            font-size: 14px;
+        }
+
+        .description{
+            text-align: center;
+            border-top: 0.5px solid #dadada;
+        }
+        a:link, a:visited{
+            color: black;
+            text-decoration: none;
+        }
+
+        img{
+            padding: 20px;
+            width: 60px;
+        }
+
+        .icon{
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .icon a{
+            font-size: 12px;
+        }
+
+        .icon:hover{
+            opacity: 0.4;
+        }
+
+        .cource-list{
+            border-top: 0.5px solid #dadada;
+            padding: 0 20px;
+            padding-top: 20px;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .fa{
+            font-size: 20px;
+            color: #2f5876;
+        }
+
+        #timetable-wrapper{
+            margin-top: 20px;
+            margin-left: 30px;
+            width: 100%;
+            padding-right: 50px;
+        }
+
+        #timetable-wrapper h2{
+            color: darkblue;
+        }
+
+        #timetable-wrapper table{   
+            border-collapse: collapse;
+            font-size: 12px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #timetable-wrapper th,td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .timetable-link{
+            color: red !important;
+        }
+
+        #button-section{
+            margin: 10px 0;
+        }
+        #button-section button{
+            border: 1px solid darkblue;
+            border-radius: 5px;
+            padding: 5px;
+            transition: all 0.3s;
+        }
+        #button-section button:hover{
+            background-color: #ADD8E6;
+        }
+        .selected-day-btn{
+            background-color: #ADD8E6;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- START HEADER -->
+        <div class="app-header">
+            <h1>
+                <img src="images/icon_150.png" alt="Campus">
+                Campus Shortcuts
+                <span> (2.0.0) </span>
+            </h1>
+        </div>
+        <!-- END OF HEADER -->
+
+        <div class="description">
+            <p>Easy access to cources</p>
+        </div>
+
+        <!-- START OF COURSES -->
+
+        <div class="cource-list" id="cource-list">
+
+        </div>
+        <!-- END OF COURSE -->
+
+
+        <!-- START OF TIMETABLE -->
+        <div id="timetable-wrapper">
+            <h2><span id="date"></span> Timetable</h2>
+            <div id="button-section">
+                <button id="btn-1">Mon</button>
+                <button id="btn-2">Tue</button>
+                <button id="btn-3">Wed</button>
+                <button id="btn-4">Thu</button>
+                <button id="btn-5">Fri</button>
+            </div>
+            <table id="timetable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8.00 -10.00</td>
+                        <td>Course 01</td>
+                    </tr>
+                    <tr>
+                        <td>8.00 -10.00</td>
+                        <td>Course 01</td>
+                    </tr>
+                    <tr>
+                        <td>8.00 -10.00</td>
+                        <td>Course 01</td>
+                    </tr>
+                    <tr>
+                        <td>8.00 -10.00</td>
+                        <td>Course 01</td>
+                    </tr>
+                    <tr>
+                        <td>8.00 -10.00</td>
+                        <td>Course 01</td>
+                    </tr>
+                    <tr>
+                        <td>8.00 -10.00</td>
+                        <td>Course 01</td>
+                    </tr>
+                    <tr>
+                        <td>8.00 -10.00</td>
+                        <td>Course 01</td>
+                    </tr>
+                    <tr>
+                        <td>8.00 -10.00</td>
+                        <td>Course 01</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- END OF TIMETABLE -->
+    </div>
+
+    <script src="./popup.js"></script>
+</body>
+</html>
